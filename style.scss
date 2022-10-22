@@ -22,7 +22,7 @@ html {
 
 body {
 	background: #EEF4ED;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 sans-serif;
   color: #0A0908;
 }
 
@@ -260,7 +260,7 @@ nav {
 .carousel-item { 
   max-height:650px; 
   overflow:hidden;
-  height: 75vh;
+  height: 55vh;
   background-size: cover;
   background-position: center center;
 }
@@ -275,15 +275,18 @@ nav {
   -ms-transform: translate(-50%, -50%);
 }
 
+.carousel-caption a {
+  color: #EEF4ED;
+}
+
 #about {
   text-align: center;
   font-family: 'DotGothic16', sans-serif;
   padding: 30px;
+  h2 {
+    font-family: 'DotGothic16', sans-serif;
+  }
 } 
-
-.carousel-caption a {
-  color: #EEF4ED;
-}
 
 //
 // .main
