@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
+<sub>
 ```java
+
 /* 
  * Greetings! My name is Janelle. I'm a penultimate year IT/Engineering student looking for a full-time entry opportunity in the IT 
  * sector. I'm accomplished in a multitude of programming languages and data analysis as well as possess the ability to grasp
@@ -18,13 +20,35 @@ class Main {
     public static void main(String[] args) {
 
         int myAge = 22;
+        
         String myEducation = "Bachelor of IT/Engineering (Hons) at Macquarie University (2019-Present)";
-        String[] mySkills = new String {"Java", "Python", "R", "C", "HTML", "CSS", "JavaScript", "SQL", "Git", "Arduino", "JSON"};
-        String[] myInterests = new String {"Linguistics", "Chess", "Programming", "Reading", "History", "Stoicism", "Everything :)"};
+
+        ArrayList<String> mySkills = new ArrayList<String>(); 
+        mySkills.add("Java");
+        mySkills.add("Python");
+        mySkills.add("R");
+        mySkills.add("C");
+        mySkills.add("HTML");
+        mySkills.add("CSS");
+        mySkills.add("JavaScript");
+        mySkills.add("SQL");
+        mySkills.add("Git");
+        mySkills.add("Arduino");
+        mySkills.add("JSON");
+
+        ArrayList<String> myInterests = new ArrayList<String>();
+        myInterests.add("Linguistics");
+        myIntrerest.add("Chess");
+        myInterest.add("Programming");
+        myInterest.add("Reading");
+        myInterest.add("History");
+        myInterest.add("Stoicism");
+        myInterest.add("Everything :)");
+
         String myContactDetails = "janelledelosreyesmallari@gmail.com";
 
-        Candidate jm = new Candidate("Janelle", "Mallari", myAge, myEducation, mySkills, myInterests, myContactDetails);
-        
+        Candidate jmallari = new Candidate("Janelle", "Mallari", myAge, myEducation, mySkills, myInterests, myContactDetails);
+
     }
 
 }
@@ -36,7 +60,7 @@ public class Person {
     private String lName;
     private int age;
 
-    // Constructor
+    // Constructors
     Person(String fName, String lName, int age) {
 
         this.fName = fName;
@@ -58,8 +82,16 @@ public class Person {
         return age;
     }
     
-    public void setAge(int ageVal) {
-        age = ageVal;
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void incrementAge() {
+        this.age = this.age + 1;
+    }
+
+    public void displayInfo() {
+        // TO-DO
     }
 
 }
@@ -67,8 +99,8 @@ public class Person {
 public class Candidate extends Person {
 
     private String education;
-    private String[] skills;
-    private String[] interests;
+    private ArrayList<String> skills;
+    private ArrayList<String> interests;
     private String contactDetails;
 
     Candidate(String fName, String lName, int age, String education, String[] skills, String[] interests, String contactDetails) {
@@ -85,18 +117,15 @@ public class Candidate extends Person {
         return education;
     }
 
-    public String[] getSkills() {
-        // TO DO
-    }
-
-    public String[] getInterests() {
-        // TO DO 
-    }
-    
     public String getContactDetails() {
         return contactDetails;
+    }
+
+    public void displayInfo() {
+        // TO-DO
     }
 
 }
 
 ```
+</sub>
