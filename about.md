@@ -4,26 +4,31 @@ title: About
 permalink: /about/
 ---
 
-<sub>
 ```java
 
 /* 
- * Greetings! My name is Janelle. I'm a penultimate year IT/Engineering student looking for a full-time entry opportunity in the IT 
- * sector. I'm accomplished in a multitude of programming languages and data analysis as well as possess the ability to grasp
- * new concepts completely and easily.
+ * Greetings! My name is Janelle. I'm a penultimate year 
+ * IT/Engineering student looking for a full-time entry 
+ * opportunity in the IT sector. I'm accomplished in a 
+ * multitude of programming languages and data analysis as 
+ * well as possess the ability to grasp new concepts 
+ * completely and easily.
  */ 
 
 import java.util.*;
 
-class Main {
-
+public class Main {
     public static void main(String[] args) {
+
+        String myFName = "Janelle";
+        String myLName = "Mallari";
 
         int myAge = 22;
         
-        String myEducation = "Bachelor of IT/Engineering (Hons) at Macquarie University (2019-Present)";
+        String myEducation = 
+        "Bachelor of IT/Engineering (Hons) at Macquarie University (2019-Present)";
 
-        ArrayList<String> mySkills = new ArrayList<String>(); 
+        ArrayList<String> mySkills = new ArrayList<String>();
         mySkills.add("Java");
         mySkills.add("Python");
         mySkills.add("R");
@@ -38,27 +43,29 @@ class Main {
 
         ArrayList<String> myInterests = new ArrayList<String>();
         myInterests.add("Linguistics");
-        myIntrerest.add("Chess");
-        myInterest.add("Programming");
-        myInterest.add("Reading");
-        myInterest.add("History");
-        myInterest.add("Stoicism");
-        myInterest.add("Everything :)");
-
+        myInterests.add("Chess");
+        myInterests.add("Programming");
+        myInterests.add("Reading");
+        myInterests.add("History");
+        myInterests.add("Stoicism");
+        myInterests.add("Bushwalking");
+        myInterests.add("Everything :)");
+        
         String myContactDetails = "janelledelosreyesmallari@gmail.com";
 
-        Candidate jmallari = new Candidate("Janelle", "Mallari", myAge, myEducation, mySkills, myInterests, myContactDetails);
+        Candidate jmallari = new Candidate(myFName, myLName, myAge, myEducation, mySkills, myInterests, myContactDetails);
 
+        System.out.println(jmallari.basicEnglishIntro());
+        
     }
-
 }
 
 public class Person {
 
-    // Declaration
-    private String fName;
-    private String lName;
-    private int age;
+    // Declarations
+    public String fName;
+    public String lName;
+    public int age;
 
     // Constructors
     Person(String fName, String lName, int age) {
@@ -90,8 +97,9 @@ public class Person {
         this.age = this.age + 1;
     }
 
-    public void displayInfo() {
-        // TO-DO
+    public String basicEnglishIntro() {
+        return "Hello! My name is " + this.fName + 
+        " " + this.lName + ".";
     }
 
 }
@@ -103,14 +111,14 @@ public class Candidate extends Person {
     private ArrayList<String> interests;
     private String contactDetails;
 
-    Candidate(String fName, String lName, int age, String education, String[] skills, String[] interests, String contactDetails) {
+    Candidate(String fName, String lName, int age, String education, ArrayList<String> skills, ArrayList<String> interests, String contactDetails) {
 
         super(fName, lName, age);
         this.education = education;
         this.skills = skills;
         this.interests = interests;
         this.contactDetails = contactDetails;
-
+         
     }
 
     public String getEducation() {
@@ -121,11 +129,6 @@ public class Candidate extends Person {
         return contactDetails;
     }
 
-    public void displayInfo() {
-        // TO-DO
-    }
-
 }
 
 ```
-</sub>
