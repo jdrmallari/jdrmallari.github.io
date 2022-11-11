@@ -28,6 +28,10 @@ public class Main {
         String myEducation = 
         "Bachelor of IT/Engineering (Hons) at Macquarie University (2019-Present)";
 
+        ArrayList<String> myExperience = new ArrayList<String>();
+        myExperience.add("Template Analyst at Midwinter Financial Services (July 2021 - Present)");
+        myExperience.add("Support Services Level 6 (Results Department) at Douglass Hanly Moir Pathology (January 2018 - Present)");
+
         ArrayList<String> mySkills = new ArrayList<String>();
         mySkills.add("Java");
         mySkills.add("Python");
@@ -40,6 +44,11 @@ public class Main {
         mySkills.add("Git");
         mySkills.add("Arduino");
         mySkills.add("JSON");
+        mySkills.add("Markdown");
+        mySkills.add("Statistical Modelling");
+        mySkills.add("Machine Learning");
+        mySkills.add("Data Visualisation");
+        
 
         ArrayList<String> myInterests = new ArrayList<String>();
         myInterests.add("Linguistics");
@@ -47,15 +56,16 @@ public class Main {
         myInterests.add("Programming");
         myInterests.add("Reading");
         myInterests.add("History");
-        myInterests.add("Stoicism");
+        myInterests.add("Philosophy");
         myInterests.add("Bushwalking");
-        myInterests.add("Everything :)");
+        myInterests.add("Gardening");
+        myInterests.add("Most Things :)");
         
         String myContactDetails = "janelledelosreyesmallari@gmail.com";
 
-        Candidate jmallari = new Candidate(myFName, myLName, myAge, myEducation, mySkills, myInterests, myContactDetails);
+        Candidate jmallari = new Candidate(myFName, myLName, myAge, myInterests, myEducation, myExperience, mySkills, myContactDetails);
 
-        System.out.println(jmallari.basicEnglishIntro());
+        System.out.println(jmallari.basicIntro());
         
     }
 }
@@ -66,13 +76,15 @@ public class Person {
     public String fName;
     public String lName;
     public int age;
+    private ArrayList<String> interests;
 
     // Constructors
-    Person(String fName, String lName, int age) {
+    Person(String fName, String lName, int age, ArrayList<String> interests) {
 
         this.fName = fName;
         this.lName = lName;
         this.age = age;
+        this.interests = interests;
 
     }
 
@@ -88,6 +100,10 @@ public class Person {
     public int getAge() {
         return age;
     }
+
+    public ArrayList<String> getInterests() {
+        return interests;
+    }
     
     public void setAge(int age) {
         this.age = age;
@@ -97,9 +113,9 @@ public class Person {
         this.age = this.age + 1;
     }
 
-    public String basicEnglishIntro() {
-        return "Hello! My name is " + this.fName + 
-        " " + this.lName + ".";
+    public String basicIntro() {
+        return "Hello! My name is " + fName + 
+        " " + lName + ". Nice to meet you.";
     }
 
 }
@@ -107,22 +123,26 @@ public class Person {
 public class Candidate extends Person {
 
     private String education;
+    private ArrayList<String> experience;
     private ArrayList<String> skills;
-    private ArrayList<String> interests;
     private String contactDetails;
 
-    Candidate(String fName, String lName, int age, String education, ArrayList<String> skills, ArrayList<String> interests, String contactDetails) {
+    Candidate(String fName, String lName, int age, ArrayList<String> interests, String education, ArrayList<String> experience, ArrayList<String> skills, String contactDetails) {
 
-        super(fName, lName, age);
+        super(fName, lName, age, interests);
         this.education = education;
+        this.experience = experience;
         this.skills = skills;
-        this.interests = interests;
         this.contactDetails = contactDetails;
          
     }
 
     public String getEducation() {
         return education;
+    }
+
+    public ArrayList<String> getSkills() {
+        return skills;
     }
 
     public String getContactDetails() {
