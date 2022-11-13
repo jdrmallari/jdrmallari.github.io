@@ -66,6 +66,21 @@ public class Main {
         Candidate jmallari = new Candidate(myFName, myLName, myAge, myInterests, myEducation, myExperience, mySkills, myContactDetails);
 
         System.out.println(jmallari.basicIntro());
+
+        // remove whitespace, brackets, and everything in between the brackets
+        System.out.println("I'm currently working as a " + myExperience.get(0).replaceAll("\\s+\\((.*?)\\)", ".") + "\n");
+
+        System.out.println("I'm proficient in:");
+        for (String skill : mySkills) { 		      
+            System.out.println("- " + skill);
+        }
+
+        System.out.println("\n");
+
+        System.out.println("My hobbies and interests include:");
+        for (String interest : myInterests) { 		      
+           System.out.println("- " + interest);
+        }
         
     }
 }
