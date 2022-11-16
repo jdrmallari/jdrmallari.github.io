@@ -8,7 +8,7 @@ permalink: /about/
 
 /* 
  * Greetings! My name is Janelle. I'm a penultimate year 
- * IT/Engineering student looking for a full-time entry 
+ * IT/Engineering student looking for a part-time entry 
  * opportunity in the IT sector. I'm accomplished in a 
  * multitude of programming languages and data analysis as 
  * well as possess the ability to grasp new concepts 
@@ -29,8 +29,8 @@ public class Main {
         "Bachelor of IT/Engineering (Hons) at Macquarie University (2019-Present)";
 
         ArrayList<String> myExperience = new ArrayList<String>();
-        myExperience.add("Template Analyst at Midwinter Financial Services (July 2021 - Present)");
         myExperience.add("Support Services Level 6 (Results Department) at Douglass Hanly Moir Pathology (January 2018 - Present)");
+        myExperience.add("Template Analyst at Midwinter Financial Services (July 2021 - Present)");
 
         ArrayList<String> mySkills = new ArrayList<String>();
         mySkills.add("Java");
@@ -67,8 +67,8 @@ public class Main {
 
         System.out.println(jmallari.basicIntro());
 
-        // remove whitespace, brackets, and everything in between the brackets
-        System.out.println("I'm currently working as a " + myExperience.get(0).replaceAll("\\s+\\((.*?)\\)", ".") + "\n");
+        // remove whitespace, brackets, and everything in between the brackets from most recent experience
+        System.out.println("I'm currently working as a " + myExperience.get(myExperience.size() - 1).replaceAll("\\s+\\((.*?)\\)", ".") + "\n");
 
         System.out.println("I'm proficient in:");
         for (String skill : mySkills) { 		      

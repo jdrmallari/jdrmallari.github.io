@@ -243,6 +243,10 @@ nav {
   }
 }
 
+//
+// .main
+//
+
 .overlay {
   position: static;
   top: 0;
@@ -282,15 +286,6 @@ nav {
   color: #EEF4ED;
 }
 
-#about {
-  text-align: center;
-  font-family: 'DotGothic16', sans-serif;
-  padding: 30px;
-  h2 {
-    font-family: 'DotGothic16', sans-serif;
-  }
-} 
-
 .post .header {
   position: relative;
 }
@@ -320,9 +315,13 @@ nav {
   width: 100%;
 }
 
-//
-// .main
-//
+.projects-container img {
+  max-height: 225px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
 
 .posts > .post {
   padding-bottom: 2em;
@@ -349,10 +348,19 @@ nav {
   }
 
   .read-more {
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 15px;
   }
 }
+
+#about {
+  text-align: center;
+  font-family: 'DotGothic16', sans-serif;
+  padding: 30px;
+  h2 {
+    font-family: 'DotGothic16', sans-serif;
+  }
+} 
 
 .wrapper-footer {
   margin-top: 50px;
