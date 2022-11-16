@@ -315,7 +315,13 @@ nav {
   width: 100%;
 }
 
+.projects-container .col {
+  margin-bottom: 50px;
+  font-size: 1.8vw;
+}
+
 .projects-container img {
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   max-height: 225px;
   object-fit: cover;
   height: 100%;
