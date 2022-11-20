@@ -315,18 +315,23 @@ nav {
   width: 100%;
 }
 
+.projects-container {
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-row-gap: 6rem;
+  margin-bottom: 125px;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+}
+
 .projects-container .col {
-  margin-bottom: 50px;
-  font-size: 1vw;
+  height: 225px;
 }
 
 .projects-container img {
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   max-height: 225px;
   object-fit: cover;
   height: 100%;
   width: 100%;
-  margin: 0 auto;
 }
 
 .posts > .post {
@@ -378,6 +383,16 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .projects-container img { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .projects-container img { grid-template-columns: repeat(3, 1fr); }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
