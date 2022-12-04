@@ -4,6 +4,7 @@ title: "Hello World!"
 tldr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 date: 2022-11-11
 tags: Aesthetics
+permalink: /hello-world
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue quisque egestas diam in arcu cursus euismod quis. Sed turpis tincidunt id aliquet. Proin fermentum leo vel orci. Vestibulum lorem sed risus ultricies. Viverra vitae congue eu consequat ac felis donec et. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Nunc faucibus a pellentesque sit amet porttitor eget. Sed faucibus turpis in eu mi bibendum neque. Dolor magna eget est lorem ipsum. Sit amet justo donec enim diam vulputate ut. Ipsum dolor sit amet consectetur. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Felis eget nunc lobortis mattis aliquam.

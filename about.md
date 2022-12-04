@@ -10,7 +10,7 @@ permalink: /about/
  * Greetings! My name is Janelle. I'm a penultimate year 
  * IT/Engineering student looking for a part-time entry 
  * opportunity in the IT sector. I'm accomplished in a 
- * multitude of programming languages and data analysis as 
+ * multitude of programming languages and data science as 
  * well as possess the ability to grasp new concepts 
  * completely and easily.
  */ 
