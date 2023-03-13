@@ -8,11 +8,11 @@ permalink: /about/
 
 /* 
  * Greetings! My name is Janelle. I'm a penultimate year 
- * IT/Engineering student looking for a part-time entry 
- * opportunity in the IT sector. I'm accomplished in a 
- * multitude of programming languages and data science as 
- * well as possess the ability to grasp new concepts 
- * completely and easily.
+ * IT/Engineering student looking for a full-time or 
+ * part-time entry opportunity in the IT sector. I'm 
+ * accomplished in a multitude of programming languages 
+ * and data science as well as possess the ability to 
+ * grasp new concepts completely and easily.
  */ 
 
 import java.util.*;
@@ -23,14 +23,19 @@ public class Main {
         String myFName = "Janelle";
         String myLName = "Mallari";
 
-        int myAge = 22;
+        int myAge = 23;
         
         String myEducation = 
-        "Bachelor of IT/Engineering (Hons) at Macquarie University (2019-Present)";
+        "Bachelor of IT/Engineering (Hons) at Macquarie 
+        University (2019-Present)";
 
-        ArrayList<String> myExperience = new ArrayList<String>();
-        myExperience.add("Support Services Level 6 (Results Department) at Douglass Hanly Moir Pathology (January 2018 - Present)");
-        myExperience.add("Template Analyst at Midwinter Financial Services (July 2021 - Present)");
+        ArrayList<String> myExperience = new 
+        ArrayList<String>();
+        myExperience.add("Support Services Level 6 
+        (Results Department) at Douglass Hanly Moir 
+        Pathology (January 2018 - Present)");
+        myExperience.add("Template Business Analyst at 
+        Midwinter Financial Services (July 2021 - Present)");
 
         ArrayList<String> mySkills = new ArrayList<String>();
         mySkills.add("Java");
@@ -50,7 +55,8 @@ public class Main {
         mySkills.add("Data Visualisation");
         
 
-        ArrayList<String> myInterests = new ArrayList<String>();
+        ArrayList<String> myInterests = new 
+        ArrayList<String>();
         myInterests.add("Linguistics");
         myInterests.add("Chess");
         myInterests.add("Programming");
@@ -61,14 +67,23 @@ public class Main {
         myInterests.add("Gardening");
         myInterests.add("Most Things :)");
         
-        String myContactDetails = "janelledelosreyesmallari@gmail.com";
+        String myContactDetails = "janelledelosreyesmallari
+        @gmail.com";
 
-        Candidate jmallari = new Candidate(myFName, myLName, myAge, myInterests, myEducation, myExperience, mySkills, myContactDetails);
+        Candidate jmallari = new Candidate(myFName, myLName, 
+        myAge, myInterests, myEducation, myExperience, 
+        mySkills, myContactDetails);
+
+        // Display relevant info on console
 
         System.out.println(jmallari.basicIntro());
 
-        // remove whitespace, brackets, and everything in between the brackets from most recent experience
-        System.out.println("I'm currently working as a " + myExperience.get(myExperience.size() - 1).replaceAll("\\s+\\((.*?)\\)", ".") + "\n");
+        /* remove whitespace, brackets, and everything in 
+         between the brackets from most recent experience */
+
+        System.out.println("I'm currently working as a " + 
+        myExperience.get(myExperience.size() - 1).replaceAll
+        ("\\s+\\((.*?)\\)", ".") + "\n");
 
         System.out.println("I'm proficient in:");
         for (String skill : mySkills) { 		      
@@ -77,7 +92,8 @@ public class Main {
 
         System.out.println("\n");
 
-        System.out.println("My hobbies and interests include:");
+        System.out.println("My hobbies and interests 
+        include:");
         for (String interest : myInterests) { 		      
            System.out.println("- " + interest);
         }
@@ -94,7 +110,8 @@ public class Person {
     private ArrayList<String> interests;
 
     // Constructors
-    Person(String fName, String lName, int age, ArrayList<String> interests) {
+    Person(String fName, String lName, int age, 
+    ArrayList<String> interests) {
 
         this.fName = fName;
         this.lName = lName;
@@ -129,8 +146,8 @@ public class Person {
     }
 
     public String basicIntro() {
-        return "Hello! My name is " + fName + 
-        " " + lName + ". Nice to meet you.";
+        return "Hello! My name is " + getFName() + 
+        " " + getLName() + ". Nice to meet you.";
     }
 
 }
@@ -142,7 +159,10 @@ public class Candidate extends Person {
     private ArrayList<String> skills;
     private String contactDetails;
 
-    Candidate(String fName, String lName, int age, ArrayList<String> interests, String education, ArrayList<String> experience, ArrayList<String> skills, String contactDetails) {
+    Candidate(String fName, String lName, int age, 
+    ArrayList<String> interests, String education, 
+    ArrayList<String> experience, ArrayList<String> skills, 
+    String contactDetails) {
 
         super(fName, lName, age, interests);
         this.education = education;
