@@ -45,6 +45,8 @@ public class Main {
         mySkills.add("HTML");
         mySkills.add("CSS");
         mySkills.add("JavaScript");
+        mySkills.add("Angular");
+        mySkills.add("React");
         mySkills.add("SQL");
         mySkills.add("Git");
         mySkills.add("Arduino");
@@ -53,8 +55,8 @@ public class Main {
         mySkills.add("Statistical Modelling");
         mySkills.add("Machine Learning");
         mySkills.add("Data Visualisation");
+        mySkills.add("Figma");
         
-
         ArrayList<String> myInterests = new 
         ArrayList<String>();
         myInterests.add("Linguistics");
@@ -65,7 +67,6 @@ public class Main {
         myInterests.add("Philosophy");
         myInterests.add("Bushwalking");
         myInterests.add("Gardening");
-        myInterests.add("Most Things :)");
         
         String myContactDetails = "janelledelosreyesmallari
         @gmail.com";
